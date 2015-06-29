@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "croxid",
+    "version": "0.1",
+    "description": "Frontend for proxid",
+    "permissions": [
+        "proxy"
+    ],
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "img/icon_19.png",
+            "38": "img/icon_38.png"
+        },
+        "default_title": "croxid ssh proxy",
+        "default_popup": "popup.html"
+    }
+}
