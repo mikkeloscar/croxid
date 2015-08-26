@@ -1,6 +1,6 @@
 var badgeOn = function () {
   chrome.browserAction.setBadgeBackgroundColor({
-    "color": [255, 0, 0, 255]
+    "color": [61, 178, 217, 255]
   });
   chrome.browserAction.setBadgeText({
     "text": "On"
