@@ -22,6 +22,11 @@ var template = function (host, active) {
 
 $(document).ready(function () {
   proxid.info(function (err, data) {
+    console.log(data);
+    data.sort(function(a, b) {
+      return a.Host[0].localeCompare(b.Host[0]);
+    });
+    console.log(data);
     data.forEach(function (host) {
       if (localStorage.current !== "" && host.Host[0] === localStorage.current) {
         $("#hosts > ul").append(template(host, true));
