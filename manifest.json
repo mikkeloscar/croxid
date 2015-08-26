@@ -18,5 +18,8 @@
         },
         "default_title": "croxid ssh proxy",
         "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "img/icon_128.png"
     }
 }
