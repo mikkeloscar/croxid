@@ -19,18 +19,23 @@ li {
   border-bottom: 1px solid #ddd;
 }
 
+li:last-child {
+  border-bottom: none;
+}
+
 li .info {
   width: 80%;
-  display: inline-block;
+  display: table-cell;
 }
 
 li .action {
   width: 20%;
-  display: inline-block;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 li .action .btn {
-  background: #e2e2e2;
+  background: #e2e2e2 center center;
   border-radius: 10px;
   width: 20px;
   height: 20px;
