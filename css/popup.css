@@ -15,7 +15,7 @@ ul {
 
 li {
   margin: 0;
-  padding: 0.5em 1em;
+  padding: 0.5em 0;
   border-bottom: 1px solid #ddd;
 }
 
@@ -23,18 +23,26 @@ li:last-child {
   border-bottom: none;
 }
 
+li .host {
+  position: relative;
+}
+
 li .info {
-  width: 80%;
-  display: table-cell;
+  display: block;
+  padding-left: 40px;
 }
 
 li .action {
-  width: 20%;
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  bottom: 0;
 }
 
 li .action .btn {
+  align-self: center;
   background: #e2e2e2 center center;
   border-radius: 10px;
   width: 20px;
