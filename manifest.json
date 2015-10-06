@@ -4,7 +4,8 @@
     "version": "0.1",
     "description": "Frontend for proxid",
     "permissions": [
-        "proxy"
+        "proxy",
+        "tabs"
     ],
     "background": {
         "scripts": [

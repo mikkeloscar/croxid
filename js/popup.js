@@ -51,7 +51,14 @@ $(document).ready(function () {
 
       proxid.start(localStorage.current, function (err) {
         // start proxy
-        proxy.enable();
+        proxy.enable(function () {
+          // refresh current tab
+          chrome.tabs.query({active: true}, function (tabs) {
+            tabs.forEach(function (tab) {
+              chrome.tabs.reload(tab.id);
+            });
+          });
+        });
       });
     }
   });

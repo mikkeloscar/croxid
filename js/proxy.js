@@ -16,7 +16,7 @@ var badgeOff = function () {
 var proxy = {
   enabled: false,
 
-  enable: function () {
+  enable: function (callback) {
     var self = this;
     var config = {
       mode: "fixed_servers",
@@ -32,10 +32,11 @@ var proxy = {
     chrome.proxy.settings.set({value: config, scope: 'regular'}, function () {
       badgeOn();
       self.enabled = true;
+      setTimeout(callback, 1000);
     });
   },
 
-  disable: function () {
+  disable: function (callback) {
     var self = this;
     var config = {
       mode: "direct"
@@ -44,14 +45,15 @@ var proxy = {
     chrome.proxy.settings.set({value: config, scope: 'regular'}, function () {
       badgeOff();
       self.enabled = false;
+      callback();
     });
   },
 
-  toggle: function () {
+  toggle: function (callback) {
     if (this.enabled) {
-      this.disable();
+      this.disable(callback);
     } else {
-      this.enable();
+      this.enable(callback);
     }
   }
 };
