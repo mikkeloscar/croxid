@@ -9,6 +9,8 @@
     ],
     "background": {
         "scripts": [
+            "js/proxid.js",
+            "js/proxy.js",
             "js/background.js"
         ]
     },
