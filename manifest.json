@@ -9,6 +9,7 @@
     ],
     "background": {
         "scripts": [
+            "js/jquery-2.1.4.min.js",
             "js/proxid.js",
             "js/proxy.js",
             "js/background.js"
