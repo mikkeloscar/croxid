@@ -21,7 +21,7 @@ var proxy = {
     var config = {
       mode: "fixed_servers",
       rules: {
-        proxyForHttp: {
+        singleProxy: {
           scheme: "socks5",
           host: "127.0.0.1"
         },
