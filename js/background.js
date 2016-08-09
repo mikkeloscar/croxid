@@ -1,8 +1,10 @@
-// init localStorage at startup
-localStorage.current = "";
-console.log(localStorage.current);
+$(document).ready(function () {
+  // init localStorage at startup
+  localStorage.current = "";
 
-// set disabled at startup
-proxy.disable(function() {
-  proxid.stop();
+  // set disabled at startup
+  proxy.disable(function() {
+    proxid.stop(function (err) {
+    });
+  });
 });
