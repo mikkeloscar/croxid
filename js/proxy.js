@@ -25,7 +25,7 @@ var proxy = {
           scheme: "socks5",
           host: "127.0.0.1"
         },
-        bypassList: ["http://localhost:4444"]
+        bypassList: ["http://localhost:4444", "localhost"]
       }
     };
 
